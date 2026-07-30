@@ -20,7 +20,7 @@
 
   // Absolute value
   { trigger: "abs", replacement: "|$0|$1", options: "mA" },
-  { trigger: "||", replacement: "|$0|$1", options: "mA" },
+  { trigger: "\mid\mid", replacement: "|$0|$1", options: "mA" },
 
 
   // Bold and mathcal
