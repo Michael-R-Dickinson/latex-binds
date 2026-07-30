@@ -51,6 +51,21 @@
     description: "Auto letter subscript with 2 numbers",
     priority: -1
   },
+  {
+    trigger: /\\(${GREEK})(\d)/,
+    replacement: "\\[[0]]_{[[1]]}",
+    options: "rmA",
+    description: "Auto Greek letter subscript",
+    priority: -1
+  },
+  // \alpha_{1}2 -> \alpha_{12}
+  {
+    trigger: /\\(${GREEK})_\{(\d+)\}(\d)/,
+    replacement: "\\[[0]]_{[[1]][[2]]}",
+    options: "rmA",
+    description: "Auto Greek letter subscript, extra digits",
+    priority: -1
+  },
 
   // Enter Text environment
   { trigger: "text", replacement: "\\text{$0}$1", options: "mA" },

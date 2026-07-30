@@ -9,6 +9,7 @@
   { trigger: "CC", replacement: "\\mathbb{C}", options: "mA" },
   { trigger: "RR", replacement: "\\mathbb{R}", options: "mA" },
   { trigger: "ZZ", replacement: "\\mathbb{Z}", options: "mA" },
+  { trigger: "QQ", replacement: "\\mathbb{Q}", options: "mA" },
   { trigger: "NN", replacement: "\\mathbb{N}", options: "mA" },
 
   // Symbols
