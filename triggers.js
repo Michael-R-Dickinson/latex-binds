@@ -3,6 +3,14 @@
   {
     trigger: ",,", replacement: "\\quad\\text{$0}", options: "mA"
   },
+  // When we go into quad to text and we just really want a quad
+  {
+    trigger: /\\quad\\text\{,/,
+    triggerAfter: /\}/,
+    replacement: "\\quad{$0",
+    options: "tA",
+    description: "Collapse an empty \\quad\\text{} back to a bare \\quad",
+  },
 
   // Small break
   { trigger: "  ", replacement: "\\;", options: "mA" },
@@ -11,15 +19,15 @@
   { trigger: "prr", replacement: "'", options: "mA" },
 
   // Absolute value
-  { trigger: "abs", replacement: "|$0|", options: "mA" },
-  { trigger: "||", replacement: "|$0|", options: "mA" },
+  { trigger: "abs", replacement: "|$0|$1", options: "mA" },
+  { trigger: "||", replacement: "|$0|$1", options: "mA" },
 
 
   // Bold and mathcal
   { trigger: "bf", replacement: "\\mathbf{$0}", options: "mA" },
   { trigger: "cal", replacement: "\\mathcal{$0}", options: "mA" },
   // type ".," after a symbol to make it bold - including greek
-  { trigger: "([a-zA-Z]),\\.", replacement: "\\mathbf{[[0]]}", options: "rmA" },
+  { trigger: "([a-zA-Z]),\\.", replacement: "\\mathcal{[[0]]}", options: "rmA" },
   { trigger: "([a-zA-Z])\\.,", replacement: "\\mathbf{[[0]]}", options: "rmA" },
   { trigger: "\\\\(${GREEK}),\\.", replacement: "\\boldsymbol{\\[[0]]}", options: "rmA" },
   { trigger: "\\\\(${GREEK})\\.,", replacement: "\\boldsymbol{\\[[0]]}", options: "rmA" },

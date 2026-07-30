@@ -5,6 +5,7 @@
 
   { trigger: "@a", replacement: "\\alpha", options: "mA" },
   { trigger: "@b", replacement: "\\beta", options: "mA" },
+  { trigger: "@B", replacement: "\\Beta", options: "mA" },
   { trigger: "@g", replacement: "\\gamma", options: "mA" },
   { trigger: "@G", replacement: "\\Gamma", options: "mA" },
   { trigger: "@d", replacement: "\\delta", options: "mA" },

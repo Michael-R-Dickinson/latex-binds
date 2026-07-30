@@ -8,6 +8,7 @@
   // Regex shortcut: typing something like "payx" produces ∂y/∂x.
   // [[0]] is the first captured letter; [[1]] is the second.
   { trigger: /pa([A-Za-z])([A-Za-z])/, replacement: "\\frac{ \\partial [[0]] }{ \\partial [[1]] } ", options: "rm" },
+  { trigger: /pa([A-Za-z])/, replacement: "\\frac{ \\partial }{ \\partial [[0]] } ", options: "rm" },
 
   { trigger: "ddt", replacement: "\\frac{d}{dt} ", options: "mA" },
 
