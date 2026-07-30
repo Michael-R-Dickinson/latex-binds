@@ -39,8 +39,8 @@
   { trigger: "=<", replacement: "\\impliedby", options: "mA" },
 
   { trigger: "and", replacement: "\\cap", options: "mA" },
-  { trigger: "orr", replacement: "\\cup", options: "mA" },
-  { trigger: "inn", replacement: "\\in", options: "mA" },
+  { trigger: "or", replacement: "\\cup", options: "mA" },
+  { trigger: "in", replacement: "\\in", options: "mA" },
   { trigger: "notin", replacement: "\\not\\in", options: "mA" },
   { trigger: "\\\\\\", replacement: "\\setminus", options: "mA" },
   { trigger: "sub=", replacement: "\\subseteq", options: "mA" },

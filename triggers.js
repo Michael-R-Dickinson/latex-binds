@@ -1,6 +1,6 @@
 [
   {
-    trigger: ",,", replacement: "\\quad\text{$0}", options: "mA"
+    trigger: ",,", replacement: "\\quad\\text{$0}", options: "mA"
   },
 
   // Bold and mathcal
