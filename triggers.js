@@ -1,7 +1,19 @@
 [
+  // Quad to text
   {
     trigger: ",,", replacement: "\\quad\\text{$0}", options: "mA"
   },
+
+  // Small break
+  { trigger: "  ", replacement: "\\;", options: "mA" },
+
+  // Prime
+  { trigger: "prr", replacement: "'", options: "mA" },
+
+  // Absolute value
+  { trigger: "abs", replacement: "|$0|", options: "mA" },
+  { trigger: "||", replacement: "|$0|", options: "mA" },
+
 
   // Bold and mathcal
   { trigger: "bf", replacement: "\\mathbf{$0}", options: "mA" },
@@ -39,6 +51,8 @@
 
   // Frac
   { trigger: "//", replacement: "\\frac{$0}{$1}$2", options: "mA" },
+  // Sqrt
+  { trigger: "sq", replacement: "\\sqrt{$0}", options: "mA" },
 
   // Diacritics
   // xhat -> \hat{x}

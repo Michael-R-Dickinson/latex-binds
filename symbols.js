@@ -1,4 +1,8 @@
 [
+  // \mid
+  // replacement for absolute value in trigger.js
+  { trigger: "|", replacement: "\\mid", options: "mA" },
+
   // Common Fancy Letters - double letter -> fancy
   { trigger: "LL", replacement: "\\mathcal{L}", options: "mA" },
   { trigger: "HH", replacement: "\\mathcal{H}", options: "mA" },
@@ -35,12 +39,14 @@
   { trigger: "<->", replacement: "\\leftrightarrow ", options: "mA" },
   { trigger: "->", replacement: "\\to", options: "mA" },
   { trigger: "!>", replacement: "\\mapsto", options: "mA" },
+  { trigger: "==>", replacement: "\\Rightarrow", options: "mA" }, // actually the shorter arrow lol
+  { trigger: "\\leq>", replacement: "\\iff", options: "mA" }, // actually the shorter arrow lol
   { trigger: "=>", replacement: "\\implies", options: "mA" },
   { trigger: "=<", replacement: "\\impliedby", options: "mA" },
 
   { trigger: "and", replacement: "\\cap", options: "mA" },
-  { trigger: "or", replacement: "\\cup", options: "mA" },
-  { trigger: "in", replacement: "\\in", options: "mA" },
+  { trigger: "orr", replacement: "\\cup", options: "mA" },
+  { trigger: "inn", replacement: "\\in", options: "mA" },
   { trigger: "notin", replacement: "\\not\\in", options: "mA" },
   { trigger: "\\\\\\", replacement: "\\setminus", options: "mA" },
   { trigger: "sub=", replacement: "\\subseteq", options: "mA" },

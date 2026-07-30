@@ -27,4 +27,5 @@
   { trigger: "@O", replacement: "\\Omega", options: "mA" },
   { trigger: "ome", replacement: "\\omega", options: "mA" },
   { trigger: "Ome", replacement: "\\Omega", options: "mA" },
+  { trigger: "psi", replacement: "\\psi", options: "mA" },
 ]
