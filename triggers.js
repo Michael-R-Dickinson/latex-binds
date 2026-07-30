@@ -1,4 +1,8 @@
 [
+  {
+    trigger: ",,", replacement: "\\quad\text{$0}", options: "mA"
+  },
+
   // Bold and mathcal
   { trigger: "bf", replacement: "\\mathbf{$0}", options: "mA" },
   { trigger: "cal", replacement: "\\mathcal{$0}", options: "mA" },
@@ -11,7 +15,7 @@
 
   // Subscript
   { trigger: "_", replacement: "_{$0}$1", options: "mA" },
-  { trigger: "sts", replacement: "_\\text{$0}", options: "mA" },
+  { trigger: ";", replacement: "_\\text{$0}", options: "mA" },
   // Auto letter subscript
   {
     trigger: /(^|[^A-Za-z\\])([A-Za-z])(\d)/,
@@ -31,6 +35,7 @@
   // Enter Text environment
   { trigger: "text", replacement: "\\text{$0}$1", options: "mA" },
   { trigger: "\"", replacement: "\\text{$0}$1", options: "mA" },
+  { trigger: "\'", replacement: "\\text{$0}$1", options: "mA" },
 
   // Frac
   { trigger: "//", replacement: "\\frac{$0}{$1}$2", options: "mA" },
