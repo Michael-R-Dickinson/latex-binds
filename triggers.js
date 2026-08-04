@@ -77,7 +77,16 @@
   // Sqrt
   { trigger: "sq", replacement: "\\sqrt{$0}", options: "mA" },
 
-  // Diacritics
+
+  // Miscelaneous fun stuff ------------------------------
+  // Automatically convert standalone letters in text to math (except a, A, I).
+  // (Un-comment to enable)
+  { trigger: /([^'])\b([B-HJ-Zb-z])\b([\n\s.,?!:'])/, replacement: "[[0]]$[[1]]$[[2]]", options: "tA" },
+
+  // Automatically convert Greek letters in text to math.
+  { trigger: "(${GREEK})([\\n\\s.,?!:'])", replacement: "$\\[[0]]$[[1]]", options: "rtAw" },
+
+  // Diacritics -------------
   // xhat -> \hat{x}
   { trigger: "hat", replacement: "\\hat{$0}$1", options: "mA" },
   { trigger: "bar", replacement: "\\bar{$0}$1", options: "mA" },
@@ -109,7 +118,7 @@
   // Example: \alphax → \alpha x
   { trigger: "\\\\(${GREEK}|${SYMBOL}|${MORE_SYMBOLS})([A-Za-z])", replacement: "\\[[0]] [[1]]", options: "rmA" },
 
-  // Environments
+  // Environments  ---------------------
   { trigger: "beg", replacement: "\\begin{gather}\n$0\n\\end{gather}", options: "mA" }, // goated
   { trigger: "cases", replacement: "\\begin{cases}\n$0\n\\end{cases}", options: "mA" },
   { trigger: "align", replacement: "\\begin{align}\n$0\n\\end{align}", options: "mA" },
