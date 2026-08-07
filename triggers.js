@@ -71,6 +71,42 @@
   { trigger: "text", replacement: "\\text{$0}$1", options: "mA" },
   { trigger: "\"", replacement: "\\text{$0}$1", options: "mA" },
   { trigger: "\'", replacement: "\\text{$0}$1", options: "mA" },
+  // If there's a stray space between the last symbol and the ' trigger,
+  // absorb it into the text block so it starts with a leading space instead
+  // of leaving a dangling space outside \text{}.
+  // e.g. "x '" -> "x\text{ |}"  and  "\alpha '" -> "\alpha\text{ |}"
+  {
+    trigger: /([A-Za-z0-9]) '/,
+    replacement: "[[0]]\\text{ $0}$1",
+    options: "rmA",
+    priority: 1,
+    description: "Start text with a leading space after a symbol + space",
+  },
+  {
+    trigger: "\\\\(${GREEK}|${SYMBOL}) '",
+    replacement: "\\[[0]]\\text{ $0}$1",
+    options: "rmA",
+    priority: 1,
+    description: "Start text with a leading space after a Greek/symbol command + space",
+  },
+  // Mirror case: if we've already closed a \text{} block, and there's a
+  // stray space before the next symbol, absorb that space into the end of
+  // the text block instead of leaving it dangling outside \text{}.
+  // e.g. "\text{foo} x" -> "\text{foo }x"  and  "\text{foo} \alpha" -> "\text{foo }\alpha"
+  {
+    trigger: /\\text\{([^{}]*)\} ([A-Za-z0-9])/,
+    replacement: "\\text{[[0]] }[[1]]",
+    options: "rmA",
+    priority: 1,
+    description: "Absorb trailing space into \\text{} when followed by a symbol",
+  },
+  {
+    trigger: "\\\\text\\{([^{}]*)\\} \\\\(${GREEK}|${SYMBOL}|${MORE_SYMBOLS})",
+    replacement: "\\text{[[0]] }\\[[1]]",
+    options: "rmA",
+    priority: 1,
+    description: "Absorb trailing space into \\text{} when followed by a Greek/symbol command",
+  },
 
   // Frac
   { trigger: "//", replacement: "\\frac{$0}{$1}$2", options: "mA" },
