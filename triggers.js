@@ -6,6 +6,12 @@
   {
     trigger: ",,", replacement: "\\quad\\text{$0}", options: "mA"
   },
+
+
+  {
+    trigger: "inv", replacement: "^{-1}$0", options: "mA"
+  },
+
   // When we go into quad to text and we just really want a quad
   {
     trigger: /\\quad\\text\{,/,
