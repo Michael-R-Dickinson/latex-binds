@@ -57,9 +57,13 @@
   { trigger: "e\\xi sts", replacement: "\\exists", options: "mA", priority: 1 },
 
   // Dashes
-  { trigger: "--", replacement: "–", options: "tA" },
-  { trigger: "–-", replacement: "—", options: "tA" },
-  { trigger: "—-", replacement: "---", options: "tA" },
+  // 2 dashes to n dash
+  // { trigger: "--", replacement: "–", options: "tA" },
+  // 3 dashes to em dash
+  // { trigger: "–-", replacement: "---", options: "tA" },
+  // 4 dashes to 3 dashes
+  // { trigger: "—-", replacement: "---", options: "tA" },
+  // doesn't work for creating obsidian frontmatter :(
 
   // adds \ before log,exp,ln so log-> \log
   { trigger: /([^\\])(exp|log|ln)/, replacement: "[[0]]\\[[1]]", options: "rmA" },
