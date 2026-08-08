@@ -1,6 +1,9 @@
 [
   // Quad to text
   {
+    trigger: "--", replacement: "\\quad $0", options: "mA"
+  },
+  {
     trigger: ",,", replacement: "\\quad\\text{$0}", options: "mA"
   },
   // When we go into quad to text and we just really want a quad
