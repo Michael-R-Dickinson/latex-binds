@@ -123,8 +123,9 @@
   { trigger: "(${GREEK})([\\n\\s.,?!:'])", replacement: "$\\[[0]]$[[1]]", options: "rtAw" },
 
   // Diacritics -------------
-  // xhat -> \hat{x}
+  // hat -> \hat{$0}
   { trigger: "hat", replacement: "\\hat{$0}$1", options: "mA" },
+  { trigger: "widehat", replacement: "\\widehat{$0}$1", options: "mA" },
   { trigger: "bar", replacement: "\\bar{$0}$1", options: "mA" },
   { trigger: "dot", replacement: "\\dot{$0}$1", options: "mA", priority: -1 },
   { trigger: "ddot", replacement: "\\ddot{$0}$1", options: "mA" },
@@ -133,8 +134,8 @@
   { trigger: "und", replacement: "\\underline{$0}$1", options: "mA" },
   { trigger: "vec", replacement: "\\vec{$0}$1", options: "mA" },
 
-  // hatx -> \hat{x}
-  { trigger: "([a-zA-Z])hat", replacement: "\\hat{[[0]]}", options: "rmA" },
+  // xhat -> \hat{x}
+  { trigger: "([a-zA-Z])hat", replacement: "\\hat{[[0]]}", options: "rmA", priority: -1 },
   { trigger: "([a-zA-Z])bar", replacement: "\\bar{[[0]]}", options: "rmA" },
   { trigger: "([a-zA-Z])dot", replacement: "\\dot{[[0]]}", options: "rmA", priority: -1 },
   { trigger: "([a-zA-Z])ddot", replacement: "\\ddot{[[0]]}", options: "rmA", priority: 1 },
