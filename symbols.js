@@ -39,6 +39,8 @@
 
   { trigger: "<->", replacement: "\\leftrightarrow ", options: "mA" },
   { trigger: "->", replacement: "\\to", options: "mA" },
+  { trigger: "-<", replacement: "\\leftarrow", options: "mA" }, // because i'm bad at typing
+  { trigger: "<-", replacement: "\\leftarrow", options: "mA" },
   { trigger: "!>", replacement: "\\mapsto", options: "mA" },
   { trigger: "==>", replacement: "\\Rightarrow", options: "mA" }, // actually the shorter arrow lol
   { trigger: "\\leq>", replacement: "\\iff", options: "mA" }, // actually the shorter arrow lol

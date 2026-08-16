@@ -124,9 +124,9 @@
 
 
   // Miscelaneous fun stuff ------------------------------
-  // Automatically convert standalone letters in text to math (except a, A, I).
+  // Automatically convert standalone letters in text to math (except a, A, i, I).
   // (Un-comment to enable)
-  { trigger: /([^'])\b([B-HJ-Zb-z])\b([\n\s.,?!:'])/, replacement: "[[0]]$[[1]]$[[2]]", options: "tA" },
+  { trigger: /([^'])\b([B-HJ-Zb-hj-z])\b([\n\s.,?!:'])/, replacement: "[[0]]$[[1]]$[[2]]", options: "tA" },
 
   // Automatically convert Greek letters in text to math.
   { trigger: "(${GREEK})([\\n\\s.,?!:'])", replacement: "$\\[[0]]$[[1]]", options: "rtAw" },
@@ -166,6 +166,7 @@
 
   // Environments  ---------------------
   { trigger: "beg", replacement: "\\begin{gather}\n$0\n\\end{gather}", options: "mA" }, // goated
+  { trigger: "defs", replacement: "\\begin{array}{l}\n$0\n\\end{array}", options: "mA" }, // good for definition
   { trigger: "cases", replacement: "\\begin{cases}\n$0\n\\end{cases}", options: "mA" },
   { trigger: "align", replacement: "\\begin{align}\n$0\n\\end{align}", options: "mA" },
   { trigger: "array", replacement: "\\begin{array}\n$0\n\\end{array}", options: "mA" },
