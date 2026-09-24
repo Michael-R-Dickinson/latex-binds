@@ -22,7 +22,7 @@
   },
 
   // Small break
-  { trigger: "  ", replacement: "\\;", options: "mA" },
+  // { trigger: "  ", replacement: "\\;", options: "mA" },
 
   // Prime
   { trigger: "prr", replacement: "'", options: "mA" },
@@ -32,7 +32,7 @@
   { trigger: "\\mid\\", replacement: "|$0|$1", options: "mA" },
 
   // Divides
-  { trigger: "div", replacement: "| $0", options: "mA" },
+  { trigger: "div", replacement: "\\mid $0", options: "mA" },
 
   // Bold and mathcal
   { trigger: "bf", replacement: "\\mathbf{$0}", options: "mA" },

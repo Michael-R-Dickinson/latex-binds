@@ -1,4 +1,7 @@
 [
+  // Outer product
+  { trigger: "outer", replacement: "\\otimes", options: "mA" },
+
   // \mid
   // replacement for absolute value in trigger.js
   { trigger: "|", replacement: "\\mid", options: "mA" },
