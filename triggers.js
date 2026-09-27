@@ -1,4 +1,5 @@
 [
+
   // Quad to text
   {
     trigger: "--", replacement: "\\quad $0", options: "mA"
@@ -203,13 +204,15 @@
   },
 
   // Selection based stuff - select text and press a key --------------
+  // Norms something
+  { trigger: "N", replacement: "\\left\\lvert ${VISUAL} \\right\\rvert $0", options: "mA" },
   // Wraps the selected expression in an underbrace.
-  { trigger: "U", replacement: "\\underbrace{ ${VISUAL} }_{ $0 }", options: "mA" },
+  { trigger: "U", replacement: "\\underbrace{ ${VISUAL} }_{ \\mathclap{$0} }", options: "mA" },
 
   // Wraps the selected expression in an overbrace.
   // $0 places the cursor in the label above the brace.
   // Example: select "a+b", type O → \overbrace{a+b}^{...}
-  { trigger: "O", replacement: "\\overbrace{ ${VISUAL} }^{ $0 }", options: "mA" },
+  // { trigger: "O", replacement: "\\overbrace{ ${VISUAL} }^{ $0 }", options: "mA" },
 
   // Places an editable annotation underneath the selected expression.
   // Example: select "x", type B → \underset{...}{x}
@@ -217,7 +220,7 @@
 
   // Draws a cancellation line through the selected expression.
   // Example: select "x", type C → \cancel{x}
-  { trigger: "C", replacement: "\\cancel{ ${VISUAL} }", options: "mA" },
+  // { trigger: "C", replacement: "\\cancel{ ${VISUAL} }", options: "mA" },
 
   // Cancels the selected expression with an editable destination value.
   // $0 is where you enter the value that the expression approaches or becomes.
