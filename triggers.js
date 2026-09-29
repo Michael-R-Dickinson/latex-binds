@@ -78,6 +78,21 @@
     description: "Auto Greek letter subscript, extra digits",
     priority: -1
   },
+  // Same as above, but for unicode Greek letters (θ1 -> θ_{1}, θ_{1}2 -> θ_{12})
+  {
+    trigger: /([Ͱ-Ͽ])(\d)/,
+    replacement: "[[0]]_{[[1]]}",
+    options: "rmA",
+    description: "Auto unicode Greek letter subscript",
+    priority: -1
+  },
+  {
+    trigger: /([Ͱ-Ͽ])_\{(\d+)\}(\d)/,
+    replacement: "[[0]]_{[[1]][[2]]}",
+    options: "rmA",
+    description: "Auto unicode Greek letter subscript, extra digits",
+    priority: -1
+  },
 
   // Enter Text environment
   { trigger: "text", replacement: "\\text{$0}$1", options: "mA" },
