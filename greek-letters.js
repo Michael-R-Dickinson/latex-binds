@@ -9,7 +9,7 @@
   { trigger: "@G", replacement: "Γ", options: "mA" },
   { trigger: "@d", replacement: "δ", options: "mA" },
   { trigger: "@D", replacement: "Δ", options: "mA" },
-  { trigger: "@e", replacement: "ϵ", options: "mA" },
+  { trigger: "@e", replacement: "ε", options: "mA" },
   { trigger: ":e", replacement: "\\varepsilon", options: "mA" },
   { trigger: "@z", replacement: "ζ", options: "mA" },
   { trigger: "@t", replacement: "θ", options: "mA" },

@@ -1,4 +1,7 @@
 [
+  // logical not
+  { trigger: "not", replacement: "\\lnot\ $0", options: "mA" },
+
   // Outer product
   { trigger: "outer", replacement: "\\otimes", options: "mA" },
 
@@ -53,7 +56,7 @@
   { trigger: "and", replacement: "\\cap", options: "mA" },
   { trigger: "orr", replacement: "\\cup", options: "mA" },
   { trigger: "inn", replacement: "\\in", options: "mA" },
-  { trigger: "notin", replacement: "\\not\\in", options: "mA" },
+  { trigger: "nin", replacement: "\\not\\in", options: "mA" },
   { trigger: "\\\\\\", replacement: "\\setminus", options: "mA" },
   { trigger: "sub=", replacement: "\\subseteq", options: "mA" },
   { trigger: "sup=", replacement: "\\supseteq", options: "mA" },
